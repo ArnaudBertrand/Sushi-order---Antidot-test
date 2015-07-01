@@ -1,0 +1,20 @@
+<div class="check">
+  <div class="outlined-card">
+    <h1>Search your order</h1>
+    <input type="text" ng-model="check.idToSearch" class="input" placeholder="Type your order ID"/>
+    <button ng-click="check.searchOrder()" ng-disabled="check.searchLoading" class="btn btn-submit">Search</button>
+    <span ng-show="check.error" class="help-block">
+      {{check.error}}
+    </span>
+  </div>
+  <div class="outlined-card" ng-if="check.order">
+    <h2>Client name:</h2>
+    {{check.order.customer.name}}
+    <h3 class="list-title">Order details:</h3>
+    <ul class="list">
+      <li ng-repeat="sushi in check.order.sushis">{{sushi}}</li>
+    </ul>
+    <button ng-click="check.confirmOrder()" class="btn btn-submit">Check</button>
+  </div>
+</div>
+

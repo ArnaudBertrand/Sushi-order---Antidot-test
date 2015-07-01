@@ -1,0 +1,25 @@
+<div class="home">
+  <h1>Order sushi</h1>
+  <div class="sushi" ng-repeat="sushi in home.sushis">
+    <div class="sushi-info" ng-click="home.toggleSushiSelect(sushi)">
+      <div class="image">
+        <img ng-src="{{sushi.img}}" />
+        <i class="fa fa-check" ng-show="sushi.selected"></i>
+      </div>
+      <div class="name">
+        {{sushi.name}}
+      </div>
+    </div>
+  </div>
+  <div class="image-info">*Images taken from http://www.planetasushi.lv/</div>
+  <div class="outlined-card" ng-show="home.displayDetails">
+    <div>
+      <h3 class="list-title">Order details</h3>
+      <ul class="list">
+        <li ng-repeat="sushi in home.sushis" ng-if="sushi.selected">{{sushi.name}}</li>
+      </ul>
+      <button class="btn btn-submit" ng-click="home.checkout()">Checkout</button>
+    </div>
+  </div>
+</div>
+

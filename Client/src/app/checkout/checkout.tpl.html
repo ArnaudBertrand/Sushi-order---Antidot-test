@@ -1,0 +1,40 @@
+<div class="checkout">
+  <div class="outlined-card">
+    <h3>Please fill in your informations</h3>
+    <form name="customerForm" ng-submit="checkout.process()" role="form">
+      <div>
+        <label>
+          Name
+          <input type="text" name="name" ng-model="checkout.customer.name" class="input" required  placeholder="Type your full name" />
+        </label>
+        <span ng-show="customerForm.name.$dirty && customerForm.name.$error.required" class="help-block">
+          Please insert your name
+        </span>
+      </div>
+      <div>
+        <label>
+          Delivery address
+          <input type="text" name="address" ng-model="checkout.customer.address" class="input" required placeholder="Type your delivery address"/>
+        </label>
+        <span ng-show="customerForm.address.$dirty && customerForm.address.$error.required" class="help-block">
+          Please insert a delivery address
+        </span>
+      </div>
+      <div>
+        <label>
+          Phone number
+          <input type="tel" name="tel" ng-model="checkout.customer.tel" class="input" placeholder="Type your phone number (optional)"/>
+        </label>
+      </div>
+      <div>
+        <span ng-show="checkout.error" class="help-block">
+          {{checkout.error}}
+        </span>
+        <button ng-type="submit" ng-disabled="customerForm.$invalid || checkout.dataLoading" class="btn btn-submit">
+          Validate
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+

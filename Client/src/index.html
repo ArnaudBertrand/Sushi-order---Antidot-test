@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <a href ui-sref="home">
+          <div class="logo">
+            <h1>SushiLuv</h1>
+            <img ng-src="assets/img/logo-chopstiks.jpg" />
+          </div>
+        </a>
+        <a href ui-sref="home" class="menu-item menu-item-active">
+          MENU
+        </a>
+        <a href ui-sref="check" class="menu-item">
+          CHECK YOUR ORDER
+        </a>
+        <a href="#" class="menu-item">
+          FIND US
+        </a>
+        <a href="#" class="menu-item">
+          OUR STORY
+        </a>
+      </div>
+      <div ui-view="main"></div>
+    </div>
+  </body>
+</html>

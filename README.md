@@ -41,11 +41,12 @@ Server part has been developed under NodeJS (Express)
 In order to test the application:
 - Download NodeJS if you do not have it already
 - Launch the server app.js with NodeJs*
-- Open the Client page: client/build/index.html
+- Open the Client page: client/bin/index.html*
 
 Feel free to modify the server part to create new errors and see how the application reacts.
 
 *go into the server repository with the node command and type "node app.js"
+*the bin repository is all your need to test the client application
 
 ---
 

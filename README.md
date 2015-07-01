@@ -68,7 +68,7 @@ Furthermore we'll encounter less problems with requests/connexions.
 
 ---
 
-# Possible amerliorations
+# Possible ameliorations
 - Develop unit tests (not implemented by lack of time)
 - Use a real database on the server side
 - Use CSS transitions to give a better user experience

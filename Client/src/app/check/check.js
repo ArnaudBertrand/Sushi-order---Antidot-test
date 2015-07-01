@@ -39,6 +39,7 @@
       vm.searchLoading = true;
       StatusRsc.get({orderId: vm.idToSearch}).$promise.then(function(order){
         vm.order = order;
+        vm.searchLoading = false;
       }, function (err) {
         if(err.status == 404){
           vm.error = err.data.error.type + ' - ' + err.data.error.message;

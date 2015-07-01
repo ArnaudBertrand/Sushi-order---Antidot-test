@@ -49,7 +49,7 @@ Feel free to modify the server part to create new errors and see how the applica
 
 ---
 
-# Implementation choices.
+# Implementation choices
 
 ### Ordering a sushi
 Rather than doing an HTTP GET with url parameters for sushi selection I decided to implement a POST request that could handle more data. In a REST architecture the creation of object should be handled by POST anyway and here we are creating an order. Being able to do a post allowed me to share more details on the order such as the customer informations as well for example.
@@ -73,6 +73,7 @@ Furthermore we'll encounter less problems with requests/connexions.
 - Use a real database on the server side
 - Use CSS transitions to give a better user experience
 - Send an e-mail when ordering
+- Responsive design
 
 
 If you have any question feel free to contact me :).
